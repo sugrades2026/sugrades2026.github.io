@@ -1,6 +1,7 @@
 /* Turkish source text is retained for instant, state-preserving language switching. */
 (function(){
 const pairs=[
+['Tüm derslerde ara veya seç','Search or choose any course'],['Hazır syllabus şablonu bulunmayan derslerde ağırlıkları kendin girersin.','For courses without a syllabus template, enter the weights yourself.'],['Ders ara veya seç','Search or choose a course'],['Ders kodu veya adıyla arayabilirsin.','Search by course code or name.'],['Ders ara','Search courses'],['Örn. CS 201 veya Calculus','e.g. CS 201 or Calculus'],['Kapat','Close'],
 ['Bildirim gönder','Report an issue'],['Sorun bildir','Report an issue'],['Bir hata veya öneri paylaş. Yanıt almak istersen e-posta adresini ekleyebilirsin.','Share a problem or suggestion. Add your email address if you would like a reply.'],['Mesajın','Your message'],['Karşılaştığın sorunu anlat...','Describe the issue...'],['E-posta adresin (isteğe bağlı)','Your email address (optional)'],['Gönderdiğin bilgiler FormSubmit aracılığıyla iletilir; FormSubmit bildirimleri 30 gün saklar. Gönderim FormSubmit sayfasında tamamlanır. Hassas bilgilerini paylaşma.','Your submission is sent through FormSubmit, which retains submissions for 30 days. Submission is completed on the FormSubmit site. Do not share sensitive information.'],['Gönder','Send'],['Vazgeç','Cancel'],
 ['Kendi dersini oluştur','Create your own course'],
 ['Syllabus’taki değerlendirmeleri ve yüzde ağırlıklarını gir. Ağırlıkların toplamı %100 olmalı. Devam, bonus, çan ve özel F/NA kuralları otomatik uygulanmaz.','Enter assessment components and their percentage weights from your syllabus. Weights must total 100%. Attendance, bonus points, grading curves and special F/NA rules are not applied automatically.'],
@@ -52,6 +53,7 @@ const pairs=[
 ];
 pairs.sort((a,b)=>b[0].length-a[0].length);
 function english(s){
+ const matches=s.match(/^(\d+) ders bulundu$/);if(matches)return `${matches[1]} courses found`;
  if(s.trim()==='Not')return s.replace('Not','Score');
  const m=s.match(/^Şu ana kadar %(\d+(?:[.,]\d+)?) ağırlığında not girdin\. Eksik kalemler hesaba katılmaz; bonus yalnızca tüm ana kalemler girildiğinde eklenir\.$/);if(m)return `You have entered scores for ${m[1]}% of the course weight. Missing components are excluded; bonus points are added only when all main components are entered.`;
  const n=s.match(/^([\d.,]+) SU kredisi üzerinden( · tahmini not içeriyor)?$/);if(n)return `${n[1]} SU credits${n[2]?' · includes estimated grades':''}`;
