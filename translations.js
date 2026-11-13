@@ -1,6 +1,7 @@
 /* Turkish source text is retained for instant, state-preserving language switching. */
 (function(){
 const pairs=[
+['☾ Koyu','☾ Dark'],['☀ Açık','☀ Light'],['Koyu temaya geç','Switch to dark theme'],['Açık temaya geç','Switch to light theme'],
 ['Tüm derslerde ara veya seç','Search or choose any course'],['Hazır syllabus şablonu bulunmayan derslerde ağırlıkları kendin girersin.','For courses without a syllabus template, enter the weights yourself.'],['Ders ara veya seç','Search or choose a course'],['Ders kodu veya adıyla arayabilirsin.','Search by course code or name.'],['Ders ara','Search courses'],['Örn. CS 201 veya Calculus','e.g. CS 201 or Calculus'],['Kapat','Close'],
 ['Bildirim gönder','Report an issue'],['Sorun bildir','Report an issue'],['Bir hata veya öneri paylaş. Yanıt almak istersen e-posta adresini ekleyebilirsin.','Share a problem or suggestion. Add your email address if you would like a reply.'],['Mesajın','Your message'],['Karşılaştığın sorunu anlat...','Describe the issue...'],['E-posta adresin (isteğe bağlı)','Your email address (optional)'],['Gönderdiğin bilgiler FormSubmit aracılığıyla iletilir; FormSubmit bildirimleri 30 gün saklar. Gönderim FormSubmit sayfasında tamamlanır. Hassas bilgilerini paylaşma.','Your submission is sent through FormSubmit, which retains submissions for 30 days. Submission is completed on the FormSubmit site. Do not share sensitive information.'],['Gönder','Send'],['Vazgeç','Cancel'],
 ['Kendi dersini oluştur','Create your own course'],
