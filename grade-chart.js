@@ -80,6 +80,6 @@
     if (lang === lastLanguage && theme === lastTheme) return;
     lastLanguage = lang; lastTheme = theme; render();
   }).observe(document.documentElement,{attributes:true,attributeFilter:['lang','data-theme']});
-  document.querySelector('#tab-diploma')?.addEventListener('click',()=>requestAnimationFrame(()=>{if(chart) chart.resize();}));
+  window.addEventListener('su:navigate',event=>{if(event.detail.page==='diploma')requestAnimationFrame(()=>{if(chart) chart.resize();});});
   render();
 })();

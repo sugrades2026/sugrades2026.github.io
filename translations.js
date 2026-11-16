@@ -1,6 +1,8 @@
 /* Turkish source text is retained for instant, state-preserving language switching. */
 (function(){
 const pairs=[
+['su.grades ana sayfa','su.grades home'],['Ana menü','Main menu'],['☰ Menü','☰ Menu'],['Ana sayfa','Home'],
+['01 / DERS','01 / COURSE'],['03 / MEZUNİYET','03 / GRADUATION'],['Sınav ve ödev notlarını gir, tahmini sonucunu gör.','Enter exam and assignment scores to see your estimated result.'],['Derslerini ve kredilerini ekle, ortalamanı hesapla.','Add your courses and credits to calculate your GPA.'],['Dönemlerini bir araya getir, genel ortalamanı planla.','Bring your semesters together and plan your cumulative GPA.'],['Hesaplamaya başla →','Start calculating →'],['Hesaplama aracı','Calculator'],['Notlarını ve ağırlıklarını girerek sonucunu gör.','Enter your scores and weights to see your result.'],['Derslerini ekle, kredi ağırlıklı ortalamanı öğren.','Add your courses to see your credit-weighted GPA.'],['Dönem ortalamalarınla mezuniyetini planla.','Plan your graduation with your semester averages.'],
 ["Dört ödevin ağırlıklı kategori notunu gir. Ayrı ayrı eşit ağırlıklı oldukları varsayılmamıştır; özel koşulları kaynak syllabus dosyasından kontrol et.","Enter the weighted score for all four assignments. They are not assumed equally weighted; check the source syllabus file for special conditions."],
 ["İki vize ve iki ödev için ayrı ayrı ağırlıklı kategori notlarını gir; eşit oldukları varsayılmaz. Bonus ve özel F koşulları otomatik uygulanmaz.","Enter separate weighted category scores for both midterms and both assignments; they are not assumed equally weighted. Bonus points and special F conditions are not applied automatically."],
 ["İki ödevin ağırlıklı kategori notu","Weighted score for both assignments"],

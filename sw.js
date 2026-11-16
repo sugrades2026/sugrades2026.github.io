@@ -2,9 +2,9 @@
 'use strict';
 importScripts('./workbox-sw.js');
 workbox.setConfig({modulePathPrefix:new URL('./',self.registration.scope).href,debug:false});
-const CACHE_NAME='sugrades-offline-v1';
+const CACHE_NAME='sugrades-offline-v2';
 const SCOPE_URL=new URL(self.registration.scope);
-const CORE_ASSETS=['./','./index.html','./course-catalog.js','./diploma.js','./translations.js','./scenario-storage.js','./dexie.min.js','./grade-chart.js','./chart.umd.js','./offline.js','./manifest.webmanifest','./pwa-icon.svg'];
+const CORE_ASSETS=['./','./index.html','./course-catalog.js','./diploma.js','./translations.js','./navigation.js','./scenario-storage.js','./dexie.min.js','./grade-chart.js','./chart.umd.js','./offline.js','./manifest.webmanifest','./pwa-icon.svg'];
 const OPTIONAL_ASSETS=['./pdf-import.mjs','./pdf.min.mjs','./pdf.worker.min.mjs'];
 const ALL_ASSETS=[...CORE_ASSETS,...OPTIONAL_ASSETS];
 const allowedPaths=new Set(ALL_ASSETS.map(path=>new URL(path,SCOPE_URL).pathname));
