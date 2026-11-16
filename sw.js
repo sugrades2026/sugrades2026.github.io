@@ -2,7 +2,7 @@
 'use strict';
 importScripts('./workbox-sw.js');
 workbox.setConfig({modulePathPrefix:new URL('./',self.registration.scope).href,debug:false});
-const CACHE_NAME='sugrades-offline-v5';
+const CACHE_NAME='sugrades-offline-v6';
 const SCOPE_URL=new URL(self.registration.scope);
 const CORE_ASSETS=['./','./index.html','./course-catalog.js','./diploma.js','./translations.js','./navigation.js','./scenario-storage.js','./dexie.min.js','./grade-chart.js','./chart.umd.js','./offline.js','./manifest.webmanifest','./pwa-icon.svg','./favicon.png'];
 const OPTIONAL_ASSETS=['./pdf-import.mjs','./pdf.min.mjs','./pdf.worker.min.mjs'];
