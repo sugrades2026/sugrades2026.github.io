@@ -2,9 +2,9 @@
 'use strict';
 importScripts('./workbox-sw.js');
 workbox.setConfig({modulePathPrefix:new URL('./',self.registration.scope).href,debug:false});
-const CACHE_NAME='sugrades-offline-v7';
+const CACHE_NAME='sugrades-offline-v8';
 const SCOPE_URL=new URL(self.registration.scope);
-const CORE_ASSETS=['./','./index.html','./course-catalog.js','./diploma.js','./translations.js','./navigation.js','./scenario-storage.js','./dexie.min.js','./grade-chart.js','./chart.umd.js','./offline.js','./manifest.webmanifest','./pwa-icon.svg','./favicon.png'];
+const CORE_ASSETS=['./','./index.html','./course-catalog.js','./diploma.js','./translations.js','./navigation.js','./planning-academic.js','./planning-final.js','./planning-persistence.js','./planning-init.js','./planning-models.js','./student-dashboard.js','./personal-countdown.js','./personal-progress.js','./scenario-share.js','./command-palette.js','./scenario-storage.js','./dexie.min.js','./grade-chart.js','./chart.umd.js','./offline.js','./manifest.webmanifest','./pwa-icon.svg','./favicon.png'];
 const OPTIONAL_ASSETS=['./pdf-import.mjs','./pdf.min.mjs','./pdf.worker.min.mjs'];
 const ALL_ASSETS=[...CORE_ASSETS,...OPTIONAL_ASSETS];
 const allowedPaths=new Set(ALL_ASSETS.map(path=>new URL(path,SCOPE_URL).pathname));

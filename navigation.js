@@ -1,7 +1,7 @@
 /* Shareable views within one application: keep calculations intact while navigating. */
 (() => {
   'use strict';
-  const pages = ['home', 'course', 'gpa', 'diploma'];
+  const pages = ['home', 'course', 'gpa', 'diploma', 'planning'];
   const menu = document.querySelector('#menuPanel');
   const toggle = document.querySelector('#menuToggle');
   const menuButtons = pages.map(page => document.querySelector('#tab-' + page));
