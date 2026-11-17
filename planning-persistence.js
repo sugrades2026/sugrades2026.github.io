@@ -6,7 +6,7 @@
   const words = {
     tr: {
       title: 'Planını bu cihazda sakla',
-      privacy: 'Hedef GPA, ders tekrarı, çekilme, final ve quiz alanları bu tarayıcıya otomatik kaydedilir; sınıf karşılaştırması kaydedilmez. Kayıt başka cihazlara aktarılmaz. Paylaşılan cihazda işin bitince silebilirsin.',
+      privacy: 'Hedef GPA, ders tekrarı, çekilme, final ve quiz alanları bu tarayıcıya otomatik kaydedilir; sınıf karşılaştırması ve harf planı kaydedilmez. Kayıt başka cihazlara aktarılmaz. Paylaşılan cihazda işin bitince silebilirsin.',
       undo: 'Geri al', redo: 'Yinele', clear: 'Kaydedilen planı sil',
       confirm: 'Bu cihazdaki kayıtlı planı ve kaydedilen hedef GPA, tekrar, çekilme, final ve quiz alanlarını silmek istiyor musun? Bu işlem geri alınamaz.',
       saved: 'Plan bu cihazda kaydedildi.', loaded: 'Bu cihazdaki kayıtlı plan geri yüklendi.', empty: 'Planlama alanları bu cihazda otomatik kaydedilir.',

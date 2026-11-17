@@ -34,12 +34,12 @@
     const bad=[];if(lines.length>100){show('bad','Maximum: 100');return}
     lines.forEach((line,i)=>{
       const m=line.match(/^\s*([A-Za-z]{2,8})\s*(\d{3,8}[A-Za-z]?)\s*[,;\t]\s*(\d+(?:[.]\d+)?)\s*[,;\t]\s*(A[-−]?|B[+\-−]?|C[+\-−]?|D\+?|F|NA-IN|NA-OUT|P|S|U|T|W)\s*$/i);
-      if(!m || !(Number(m[3])>0 && Number(m[3])<=30)){bad.push(String(i+1));return}
+      if(!m || !(Number(m[3])>=0 && Number(m[3])<=30)){bad.push(String(i+1));return}
       let grade=m[4].toUpperCase().replace('-', '−');if(grade==='NA−IN')grade='NA';else if(grade==='NA−OUT')grade='NA_OUT';else if(['P','S','U','T','W'].includes(grade))grade='P / S / U / T / W';
       parsed.push({code:m[1].toUpperCase()+' '+m[2].toUpperCase(),credit:m[3],grade});
     });
     if(bad.length){parsed=[];show('bad',bad.join(', '));return}
-    const gradeNames={NA:'NA · GPA içi',NA_OUT:'NA · GPA dışı'};show('ok',parsed.map(x=>`${x.code} · ${x.credit} · ${gradeNames[x.grade]||x.grade}`).join('\n'));apply.disabled=false;
+    const gradeNames=document.documentElement.lang==='en'?{NA:'NA · counts in GPA',NA_OUT:'NA · excluded from GPA'}:{NA:'NA · GPA içi',NA_OUT:'NA · GPA dışı'};show('ok',parsed.map(x=>`${x.code} · ${x.credit} · ${gradeNames[x.grade]||x.grade}`).join('\n'));apply.disabled=false;
   });
   apply.addEventListener('click',()=>{
     if(!parsed.length)return;
